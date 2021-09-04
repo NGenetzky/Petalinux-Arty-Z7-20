@@ -1417,21 +1417,10 @@ Enable DDR Controller of Zynq PS
 </TR>
 <TR valign="top">
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>Enable DDR</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-1
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-Enable DDR Controller of Zynq PS
-</TD>
-</TR>
-<TR valign="top">
-<TD width=10% BGCOLOR=#FBF5EF>
 <B>Memory Part</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-MT41J256M16 RE-125
+MT41K256M16 RE-125
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 
@@ -1618,7 +1607,7 @@ Precharge Time (tRP) is the number of clock cycles needed o terminate acces s to
 <B>tRC (ns )</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-48.91
+48.75
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
 Provide the Row cycle time tRC (ns)
@@ -1850,17 +1839,6 @@ IO PLL
 </TR>
 <TR valign="top">
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>SPI Freq (MHz)</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-IO PLL
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-166.666672
-</TD>
-</TR>
-<TR valign="top">
-<TD width=10% BGCOLOR=#FBF5EF>
 <B>FPGA0 Freq (MHz)</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
@@ -1875,10 +1853,10 @@ IO PLL
 <B>FPGA1 Freq (MHz)</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-ARM PLL
+IO PLL
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-118.181816
+200.000000
 </TD>
 </TR>
 <TR valign="top">
@@ -1886,10 +1864,10 @@ ARM PLL
 <B>FPGA2 Freq (MHz)</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-DDR PLL
+IO PLL
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-75.000000
+10.000000
 </TD>
 </TR>
 <TR valign="top">
@@ -1900,7 +1878,7 @@ DDR PLL
 IO PLL
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-50.000000
+10.000000
 </TD>
 </TR>
 </TABLE>
@@ -5613,28 +5591,6 @@ UART_CLK_CTRL
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#FBF5EF>
-<A href="#SPI_CLK_CTRL">
-SPI_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI Ref Clock Control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
 <A href="#PCAP_CLK_CTRL">
 PCAP_CLK_CTRL
 </A>
@@ -5697,50 +5653,6 @@ FPGA1_CLK_CTRL
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>PL Clock 1 Output control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA2_CLK_CTRL">
-FPGA2_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>PL Clock 2 output control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA3_CLK_CTRL">
-FPGA3_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>PL Clock 3 output control</B>
 </TD>
 </TR>
 <TR valign="top">
@@ -6864,173 +6776,6 @@ SLCR_LOCK
 </TR>
 </TABLE>
 <P>
-<H2><a name="SPI_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)SPI_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SPI_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0:0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 0 reference clock active: 0: Clock is disabled 1: Clock is enabled</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1:1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 1 reference clock active: 0: Clock is disabled 1: Clock is enabled</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>SPI_CLK_CTRL@0XF8000158</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f33</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>601</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>SPI Ref Clock Control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
 <H1>TRACE CLOCK</H1>
 <H2><a name="PCAP_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)PCAP_CLK_CTRL</a></H2>
 <TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
@@ -7402,300 +7147,6 @@ SLCR_LOCK
 <B>30</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>20</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>b</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>b00</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>100000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA1_CLK_CTRL@0XF8000180</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>100b20</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 1 Output control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA2_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA2_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA2_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>200000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA2_CLK_CTRL@0XF8000190</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>200730</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 2 output control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA3_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA3_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA3_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
 <B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
@@ -7736,10 +7187,10 @@ SLCR_LOCK
 <B>3f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>4</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>400000</B>
+<B>100000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
@@ -7747,7 +7198,7 @@ SLCR_LOCK
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA3_CLK_CTRL@0XF80001A0</B>
+<B>FPGA1_CLK_CTRL@0XF8000180</B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
 <B>31:0</B>
@@ -7759,10 +7210,10 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>400500</B>
+<B>100500</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 3 output control</B>
+<B>PL Clock 1 Output control</B>
 </TD>
 </TR>
 </TABLE>
@@ -8090,10 +7541,10 @@ SLCR_LOCK
 <B>4000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>4000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>SPI 0 AMBA Clock control 0: disable, 1: enable</B>
@@ -8313,7 +7764,7 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1dc444d</B>
+<B>1dc044d</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>AMBA Peripheral Clock Control</B>
@@ -46567,24 +46018,6 @@ MASK_DATA_0_LSW
 </TABLE>
 <P>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>USB1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>ENET RESET</H1>
 <H1>ENET0 RESET</H1>
 <H1>DIR MODE BANK 0</H1>
@@ -47199,61 +46632,7 @@ MASK_DATA_0_LSW
 <H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
 <H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>ENET1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>I2C RESET</H1>
-<H1>I2C0 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>I2C1 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>NOR CHIP SELECT</H1>
 <H1>DIR MODE BANK 0</H1>
 <H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
@@ -52446,28 +51825,6 @@ UART_CLK_CTRL
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#FBF5EF>
-<A href="#SPI_CLK_CTRL">
-SPI_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI Ref Clock Control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
 <A href="#PCAP_CLK_CTRL">
 PCAP_CLK_CTRL
 </A>
@@ -52530,50 +51887,6 @@ FPGA1_CLK_CTRL
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>PL Clock 1 Output control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA2_CLK_CTRL">
-FPGA2_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>PL Clock 2 output control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA3_CLK_CTRL">
-FPGA3_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>PL Clock 3 output control</B>
 </TD>
 </TR>
 <TR valign="top">
@@ -53697,173 +53010,6 @@ SLCR_LOCK
 </TR>
 </TABLE>
 <P>
-<H2><a name="SPI_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)SPI_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SPI_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0:0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 0 reference clock active: 0: Clock is disabled 1: Clock is enabled</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1:1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 1 reference clock active: 0: Clock is disabled 1: Clock is enabled</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>SPI_CLK_CTRL@0XF8000158</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f33</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>601</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>SPI Ref Clock Control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
 <H1>TRACE CLOCK</H1>
 <H2><a name="PCAP_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)PCAP_CLK_CTRL</a></H2>
 <TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
@@ -54235,300 +53381,6 @@ SLCR_LOCK
 <B>30</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>20</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>b</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>b00</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>100000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA1_CLK_CTRL@0XF8000180</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>100b20</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 1 Output control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA2_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA2_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA2_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Select the source used to generate the clock: 0x: Source for generated clock is IO PLL. 10: Source for generated clock is ARM PLL. 11: Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>200000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA2_CLK_CTRL@0XF8000190</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>200730</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 2 output control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA3_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA3_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA3_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
 <B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
@@ -54569,10 +53421,10 @@ SLCR_LOCK
 <B>3f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>4</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>400000</B>
+<B>100000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divide</B>
@@ -54580,7 +53432,7 @@ SLCR_LOCK
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA3_CLK_CTRL@0XF80001A0</B>
+<B>FPGA1_CLK_CTRL@0XF8000180</B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
 <B>31:0</B>
@@ -54592,10 +53444,10 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>400500</B>
+<B>100500</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
-<B>PL Clock 3 output control</B>
+<B>PL Clock 1 Output control</B>
 </TD>
 </TR>
 </TABLE>
@@ -54923,10 +53775,10 @@ SLCR_LOCK
 <B>4000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>4000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>SPI 0 AMBA Clock control 0: disable, 1: enable</B>
@@ -55146,7 +53998,7 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1dc444d</B>
+<B>1dc044d</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>AMBA Peripheral Clock Control</B>
@@ -94569,24 +93421,6 @@ MASK_DATA_0_LSW
 </TABLE>
 <P>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>USB1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>ENET RESET</H1>
 <H1>ENET0 RESET</H1>
 <H1>DIR MODE BANK 0</H1>
@@ -95201,61 +94035,7 @@ MASK_DATA_0_LSW
 <H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
 <H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>ENET1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>I2C RESET</H1>
-<H1>I2C0 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>I2C1 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>NOR CHIP SELECT</H1>
 <H1>DIR MODE BANK 0</H1>
 <H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
@@ -100407,28 +99187,6 @@ UART_CLK_CTRL
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#FBF5EF>
-<A href="#SPI_CLK_CTRL">
-SPI_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI Reference Clock Control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
 <A href="#PCAP_CLK_CTRL">
 PCAP_CLK_CTRL
 </A>
@@ -100491,50 +99249,6 @@ FPGA1_CLK_CTRL
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>FPGA 1 Output Clock Control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA2_CLK_CTRL">
-FPGA2_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>FPGA 2 Output Clock Control</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<A href="#FPGA3_CLK_CTRL">
-FPGA3_CLK_CTRL
-</A>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>RW</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>FPGA 3 Output Clock Control</B>
 </TD>
 </TR>
 <TR valign="top">
@@ -101658,173 +100372,6 @@ SLCR_LOCK
 </TR>
 </TABLE>
 <P>
-<H2><a name="SPI_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)SPI_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SPI_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000158</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0:0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 0 reference clock active. 0 - Clock is disabled. 1 - Clock is enabled.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>CLKACT1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>1:1</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>SPI 1 reference clock active. 0 - Clock is disabled. 1 - Clock is enabled.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Selects the source used to generate the clock. 0x - Source for generated clock is IO PLL. 10 - Source for generated clock is ARM PLL. 11 - Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>6</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>600</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>SPI_CLK_CTRL@0XF8000158</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f33</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>601</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>SPI Reference Clock Control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
 <H1>TRACE CLOCK</H1>
 <H2><a name="PCAP_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)PCAP_CLK_CTRL</a></H2>
 <TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
@@ -102196,300 +100743,6 @@ SLCR_LOCK
 <B>30</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>20</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Selects the source used to generate the clock. 0x - Source for generated clock is IO PLL. 10 - Source for generated clock is ARM PLL. 11 - Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>b</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>b00</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>100000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divider</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA1_CLK_CTRL@0XF8000180</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>100b20</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>FPGA 1 Output Clock Control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA2_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA2_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA2_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF8000190</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Selects the source used to generate the clock. 0x - Source for generated clock is IO PLL. 10 - Source for generated clock is ARM PLL. 11 - Source for generated clock is DDR PLL.</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR0</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>13:8</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>7</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>700</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. First cascade divider</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>DIVISOR1</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>25:20</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>3f00000</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>2</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>200000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divider</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA2_CLK_CTRL@0XF8000190</B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>31:0</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B>3f03f30</B>
-</TD>
-<TD width=10% BGCOLOR=#C0C0C0>
-<B></B>
-</TD>
-<TD width=15% BGCOLOR=#C0C0C0>
-<B>200730</B>
-</TD>
-<TD width=35% BGCOLOR=#C0C0C0>
-<B>FPGA 2 Output Clock Control</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<H2><a name="FPGA3_CLK_CTRL">Register (<A href=#mod___slcr> slcr </A>)FPGA3_CLK_CTRL</a></H2>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Register Name</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Address</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Width</B>
-</TD>
-<TD width=10% BGCOLOR=#FFFF00>
-<B>Type</B>
-</TD>
-<TD width=15% BGCOLOR=#FFFF00>
-<B>Reset Value</B>
-</TD>
-<TD width=35% BGCOLOR=#FFFF00>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>FPGA3_CLK_CTRL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0XF80001A0</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>32</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>rw</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>0x00000000</B>
-</TD>
-<TD width=35% BGCOLOR=#FBF5EF>
-<B>--</B>
-</TD>
-</TR>
-</TABLE>
-<P>
-<TABLE border=1 cellspacing=0 BORDERCOLOR=black WIDTH=100%">
-<TR valign="top">
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Field Name</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Bits</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Mask</B>
-</TD>
-<TD width=10% BGCOLOR=#C0FFC0>
-<B>Value</B>
-</TD>
-<TD width=15% BGCOLOR=#C0FFC0>
-<B>Shifted Value</B>
-</TD>
-<TD width=35% BGCOLOR=#C0FFC0>
-<B>Description</B>
-</TD>
-</TR>
-<TR valign="top">
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>SRCSEL</B>
-</TD>
-<TD width=15% BGCOLOR=#FBF5EF>
-<B>5:4</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
-<B>30</B>
-</TD>
-<TD width=10% BGCOLOR=#FBF5EF>
 <B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
@@ -102530,10 +100783,10 @@ SLCR_LOCK
 <B>3f00000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>4</B>
+<B>1</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>400000</B>
+<B>100000</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>Provides the divisor used to divide the source clock to generate the required generated clock frequency. Second cascade divider</B>
@@ -102541,7 +100794,7 @@ SLCR_LOCK
 </TR>
 <TR valign="top">
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>FPGA3_CLK_CTRL@0XF80001A0</B>
+<B>FPGA1_CLK_CTRL@0XF8000180</B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
 <B>31:0</B>
@@ -102553,10 +100806,10 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>400500</B>
+<B>100500</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
-<B>FPGA 3 Output Clock Control</B>
+<B>FPGA 1 Output Clock Control</B>
 </TD>
 </TR>
 </TABLE>
@@ -102884,10 +101137,10 @@ SLCR_LOCK
 <B>4000</B>
 </TD>
 <TD width=10% BGCOLOR=#FBF5EF>
-<B>1</B>
+<B>0</B>
 </TD>
 <TD width=15% BGCOLOR=#FBF5EF>
-<B>4000</B>
+<B>0</B>
 </TD>
 <TD width=35% BGCOLOR=#FBF5EF>
 <B>SPI 0 AMBA Clock active. 0 - Clock is disabled. 1 - Clock is enabled.</B>
@@ -103107,7 +101360,7 @@ SLCR_LOCK
 <B></B>
 </TD>
 <TD width=15% BGCOLOR=#C0C0C0>
-<B>1dc444d</B>
+<B>1dc044d</B>
 </TD>
 <TD width=35% BGCOLOR=#C0C0C0>
 <B>AMBA Peripheral Clock Control</B>
@@ -141892,24 +140145,6 @@ MASK_DATA_0_LSW
 </TABLE>
 <P>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>USB1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>ENET RESET</H1>
 <H1>ENET0 RESET</H1>
 <H1>DIR MODE BANK 0</H1>
@@ -142524,61 +140759,7 @@ MASK_DATA_0_LSW
 <H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
 <H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
 <H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>ENET1 RESET</H1>
-<H1>DIR MODE BANK 0</H1>
-<H1>DIR MODE BANK 1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE BANK 0</H1>
-<H1>OUTPUT ENABLE BANK 1</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>I2C RESET</H1>
-<H1>I2C0 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>I2C1 RESET</H1>
-<H1>DIR MODE GPIO BANK0</H1>
-<H1>DIR MODE GPIO BANK1</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>OUTPUT ENABLE</H1>
-<H1>MASK_DATA_0_LSW LOW BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW LOW BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW LOW BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW LOW BANK [53:48]</H1>
-<H1>ADD 1 MS DELAY</H1>
-<H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
-<H1>MASK_DATA_0_MSW HIGH BANK [31:16]</H1>
-<H1>MASK_DATA_1_LSW HIGH BANK [47:32]</H1>
-<H1>MASK_DATA_1_MSW HIGH BANK [53:48]</H1>
 <H1>NOR CHIP SELECT</H1>
 <H1>DIR MODE BANK 0</H1>
 <H1>MASK_DATA_0_LSW HIGH BANK [15:0]</H1>
